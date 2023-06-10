@@ -30,7 +30,9 @@ Sketches and design prototypes for the Student Information Entry Application wer
 - Form screens: Capture various sections of student information, such as personal details, academic records, financial information, and additional detail.
 
 ## Starting development server
-  ```npm run dev
+  ```
+  npm run dev
+  
   ```
  - After open the application in your browser at http://localhost:5173.
 
