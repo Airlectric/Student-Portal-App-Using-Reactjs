@@ -1,170 +1,192 @@
-
+/* Dashboard.css */
 .dashboard-container {
   display: flex;
-  height: 100vh;
   background-color: #fff4db;
 }
 
-
-.main-content {
-  flex: 1;
-  flex-wrap: wrap;
+.sidebar {
+  flex: 0.3;
   padding: 20px;
-  flex-wrap: wrap;
+  background-color: #5e54b680;
+  width: 30%;
+}
+
+.student-image {
+  width: 190px;
+  height: 170px;
+  border-radius: 80%;
+  margin-bottom: 10px;
   margin-top: 100px;
-  height: 100%;
-  width: 100;
+}
+
+.student-name {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.student-bio {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.student-details {
+  font-size: 17px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+table.student-details {
+  border-collapse: collapse;
+  border-radius: 10px;
+  width: 100%;
+}
+
+table.student-details th, table.student-details td {
+  border: 1px solid rgb(8, 10, 172);
+  padding: 10px;
+}
+
+table.student-details th {
+  background-color: #dddddd;
 }
 
 
+.content {
+  flex: 0.7;
+  padding: 20px;
+}
+
 .top-bar {
-  flex: 0 0 60px;
-  background-color: #0f058dbb; 
-  color: #ffdd57;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 20px;
-  position: fixed;
+  margin-bottom: 20px;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  height: 50px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px; 
- 
+  padding: 10px;
+  background-color:  #0f058dbb;
+  color: #ffdd57; 
+  font-size: 20px;
 }
 
-.dashboard-heading {
-  color: #c0cc15;
-}
-
-.logo {
-  width: 80px;
-  height: 45px;
+.dropdown {
+  position: relative;
+  display: inline-block;
   margin-right: 20px;
-  
 }
 
-
-.top-bar-actions .btn {
-  background-color: #f8b195;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  text-decoration: none;
-}
-
-.ddropbtn {
-  background-color: #b2bd17;
+.dropbtn {
+  background-color: #4caf50;
   color: white;
-  padding: 16px;
+  padding: 10px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  margin-right: 0px;
-  height: 50px;
-  border-top-right-radius: 5px;
 }
 
-.ddropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.ddropdown-content {
+.dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  left: 0;
-  flex: 0 0 200px;
-  color: #1c2541; 
-  border-radius: 5px;
 }
 
-.ddropdown-content a {
+.dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.ddropdown-content a:hover {background-color: #685cd391}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
-.ddropdown:hover .ddropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-.ddropdown:hover .ddropbtn {
-  background-color: #828e3e73;
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
-.ddropdown {
-  margin-right: auto;
-}
-
-
-.dashboard-widgets {
+.dashboard-widgets{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
-}
-
-.widgetd {
-  width: 200px;
-  padding: 20px;
-  margin: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.widgetd:hover {
-  transform: scale(1.1);
 }
 
 
-.widgetd-row {
-  display: flex;
-  flex-wrap: nowrap;
-  width: auto;
-  margin-bottom: 20px;
-}
-
-
-.widgetd-title {
-  color: #100744;
-  margin-top: 0;
-}
-
-.widgetd-content {
-  color: #a6a817;
-}
-
-.enrolled-courses ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.enrolled-courses li {
-  margin-bottom: 10px;
-}
-
-
-
-p {
+.dashboard-heading {
+  font-size: 24px;
   margin: 0;
 }
 
+.wid-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-.btn-primary:hover {
-  background-color: #355c7d;
+.widget {
+  flex: 1 1 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  margin-bottom: 50px; 
+  justify-content: space-evenly;
+}
+
+.widget h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: rgb(11, 11, 190);
+}
+
+.widget p {
+  font-size: 17px;
+  margin: 0;
+}
+
+.widget ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.widget ul li {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.current-cgpa p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    flex: 0.3;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .dashboard-heading {
+    font-size: 18px;
+    font: bold;
+  }
+
+
 }
