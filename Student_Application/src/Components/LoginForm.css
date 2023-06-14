@@ -1,8 +1,11 @@
+
+
 .log {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color:  #fff4db;
+  align-items:center;
+  background-color: #f2f2f2;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
@@ -19,22 +22,25 @@
 }
 
 .log:hover {
-  background-color: #fff4db8c;;
+  background-color: #f2f2f24d;
 }
 
+
 .log button {
-  background-color: #4835d4;
+  width: 200px;
+  padding: 10px;
+  font-size: 18px;
   color: #fff;
+  background-color: #051549;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
   cursor: pointer;
 }
 
 .log button:hover {
-  background-color: #362b99;
+  background-color: #091b83a8;
 }
+
 
 .iform-group {
   width: 500px;
@@ -76,17 +82,3 @@
   border-radius: 10px;
 }
 
-.log button {
-  width: 200px;
-  padding: 10px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #4835d4;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.log button:hover {
-  background-color: #362b99;
-}

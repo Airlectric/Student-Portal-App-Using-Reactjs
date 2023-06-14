@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color:  #fff4db;
+  background-color:  #f2f2f2;
   border: 1px solid #cccccc;
   border-radius: 5px;
   padding: 20px;
@@ -16,7 +16,7 @@
 
 .itopbar {
     flex: 0 0 60px;
-    background-color: #0f058dbb;
+    background-color: #071a57bb;
     color: #ffdd57; 
     display: flex;
     align-items: center;
@@ -96,7 +96,7 @@
 .submit-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #190564;
+  background-color: #060c5a;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -104,7 +104,7 @@
 }
 
 .submit-button:hover {
-  background-color: #2010ad91;
+  background-color: #05195c91;
 }
 
 @media screen and (max-width: 600px) {

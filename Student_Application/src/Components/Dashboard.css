@@ -1,90 +1,85 @@
-/* Dashboard.css */
+
 .dashboard-container {
   display: flex;
-  background-color: #fff4db;
+  flex-direction:column;
+  height: 100%;
+  background-color: #f2f2f2;
 }
 
+.dashboard-container {
+  height: 100%;
+}
+
+
 .sidebar {
-  flex: 0.3;
+  width: 300px;
+  height: 100%;
+  position:fixed;
+  background-color: #f2f2f2;
+  margin-top: 80px;
   padding: 20px;
-  background-color: #5e54b680;
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content{
+  margin-left: 300px;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 60px;
+  height: 100vh;
 }
 
 .student-image {
-  width: 190px;
-  height: 170px;
-  border-radius: 80%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   margin-bottom: 10px;
-  margin-top: 100px;
 }
 
 .student-name {
-  font-size: 24px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .student-bio {
-  font-size: 17px;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 
 .student-details {
-  font-size: 17px;
-  margin-bottom: 20px;
   width: 100%;
 }
 
-table.student-details {
-  border-collapse: collapse;
-  border-radius: 10px;
-  width: 100%;
+.student-details td {
+  padding: 5px 0;
 }
 
-table.student-details th, table.student-details td {
-  border: 1px solid rgb(8, 10, 172);
-  padding: 10px;
-}
-
-table.student-details th {
-  background-color: #dddddd;
-}
-
-
-.content {
-  flex: 0.7;
+.contentd {
+  flex: 1;
   padding: 20px;
+  width: auto;
 }
 
 .top-bar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  padding: 10px;
-  background-color:  #0f058dbb;
-  color: #ffdd57; 
-  font-size: 20px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-right: 20px;
+  height: 50px;
+  margin-right:50px;
 }
 
 .dropbtn {
-  background-color: #4caf50;
+  background-color: #08267a;
   color: white;
   padding: 10px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .dropdown-content {
@@ -111,82 +106,140 @@ table.student-details th {
   display: block;
 }
 
-.logo {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-.dashboard-widgets{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-
-.dashboard-heading {
-  font-size: 24px;
-  margin: 0;
-}
-
-.wid-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.widget {
-  flex: 1 1 300px;
+.card {
+  background-color: #fff;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-  margin-bottom: 50px; 
-  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.widget h2 {
-  font-size: 18px;
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: rgb(11, 11, 190);
+.university-logo {
+  width: 80px;
+  margin-bottom: 20px;
 }
 
-.widget p {
-  font-size: 17px;
-  margin: 0;
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.widget ul {
-  margin: 0;
-  padding: 0;
+.grades-table th,
+.grades-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.grades-table th {
+  background-color: #f2f2f2;
+}
+
+.grades-table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.assignments ul,
+.projects ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
-.widget ul li {
-  font-size: 17px;
-  margin-bottom: 5px;
+.assignments li,
+.projects li {
+  margin-bottom: 10px;
 }
 
-.current-cgpa p {
-  font-size: 30px;
+.assignment-title,
+.project-title {
+  font-weight: bold;
+}
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th,
+.timetable-table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.timetable-table th {
+  background-color: #f2f2f2;
+}
+
+.timetable-table td {
+  background-color: #fff;
+}
+
+.timetable-table td:first-child {
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
-  .sidebar {
-    flex: 0.3;
-    padding: 10px;
-    text-align: center;
-  }
+.timetable-table tbody tr:nth-child(odd) td {
+  background-color: #f9f9f9;
+}
 
-  .logo {
-    margin-bottom: 10px;
-  }
-
-  .dashboard-heading {
-    font-size: 18px;
-    font: bold;
-  }
+.timetable-table tbody tr:hover td {
+  background-color: #f2f2f2;
+}
 
 
+
+.navigation-bar {
+  background-color: #f2f2f2;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navigation-bar a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.gpa-indicator {
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.gpa-indicator span {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.far {
+  background-color: #ff5050;
+  color: white;
+}
+
+.moderate {
+  background-color: #ff9900;
+  color: white;
+}
+
+.close {
+  background-color: #ffff66;
+  color: #333;
+}
+
+.perfect {
+  background-color: #66cc66;
+  color: white;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
 }

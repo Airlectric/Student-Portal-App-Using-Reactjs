@@ -1,9 +1,12 @@
 import React from 'react';
 import './EngineeringSchoolHomepage.css';
 import logoImage from '../assets/uglogo1.jpeg';
+import Aircraft from '../assets/aircraft.jpg';
+import schLogo from '../assets/engSch.jpg';
 import facebookLogo from '../assets/facebook-logo.png';
 import twitterLogo from '../assets/twitter-logo.png';
 import instagramLogo from '../assets/instagram-logo.png';
+
 
 const EngineeringSchoolHomepage = () => {
   return (
@@ -11,71 +14,105 @@ const EngineeringSchoolHomepage = () => {
       <div className="topbar">
         <img src={logoImage} alt="UG Logo" className="logo" />
         <h1 className="head1">University Of Ghana, Legon. School of Engineering Sciences</h1>
-      </div>
-      <div className="sectopbar">
-        {/* Menu */}
-        <div className="dropdown">
-          <button className="dropbtn">Menu</button>
-          <div className="dropdown-content">
-            <a href="https://www.ug.edu.gh/home">UG website</a>
-            <a href="https://engineering.ug.edu.gh/">School of Engineering</a>
-            <a href="https://engineering.ug.edu.gh/administration">Administration</a>
-            <a href="https://www.engineering.ug.edu.gh/home">Recent News</a>
-            <a href="https://engineering.ug.edu.gh/">About</a>
-          </div>
+        <div className="search-bar">
+          {/* Search bar component */}
+          <input type="text" placeholder="Search" />
+          <button>Search</button>
         </div>
-  
-        {/* Login/Register Buttons */}
-        <div className="login-register">
-          <button className="login-btn"><a href="/login">Login</a></button>
-          <button className="register-btn"><a href="/register">Register</a></button>
-        </div>
+        <button className="cta-button"><a href='/register'>Apply now</a></button>
+        <button className="cta-button"><a href='/login'>Login</a></button>
       </div>
 
-      <div className="content">
-        <div className="widget">
+      <section className="hero-section">
+        <div className="hero-content">
           <h2>Welcome to the School of Engineering Sciences!</h2>
-          <p>Here is some information about our school:</p>
-          <ul>
-            <li>We are a leading engineering school in Ghana.</li>
-            <li>We offer a variety of undergraduate and graduate programs in engineering.</li>
-            <li>Our faculty are world-renowned experts in their fields.</li>
-            <li>Our students have won numerous awards and honors.</li>
-          </ul>
+          <p>Transforming the world through innovation and excellence in engineering education.</p>
         </div>
-        <div className="widget">
-          <h2>What we offer</h2>
-          <p>We offer a variety of programs and services to our students, including:</p>
-          <ul>
-            <li>Undergraduate and graduate programs in engineering</li>
-            <li>Research opportunities</li>
-            <li>Co-op and internship programs</li>
-            <li>Career services</li>
-            <li>Student organizations</li>
-          </ul>
+        <div className="hero-media">
+        <img src={Aircraft} alt="aircraft" />
         </div>
-        <div className="widget">
-          <h2>Why choose us?</h2>
-          <p>There are many reasons to choose the School of Engineering Sciences, including:</p>
-          <ul>
-            <li>Our world-renowned faculty</li>
-            <li>Our state-of-the-art facilities</li>
-            <li>Our strong alumni network</li>
-            <li>Our commitment to diversity and inclusion</li>
-          </ul>
+      </section>
+
+      {/* About section */}
+      <section className="about-section">
+        <h2>About the School of Engineering Sciences</h2>
+        <div className="about-content">
+          <div className="infographic" >
+            <img src={schLogo}  alt="Infographic"/>
+          </div>
+          <div className="about-text">
+            <p>
+              The School of Engineering Sciences at the University of Ghana is a leading institution in engineering education. We offer a wide range of undergraduate and graduate programs, equipped with state-of-the-art facilities and taught by world-renowned faculty members.
+            </p>
+            <p>
+              Our curriculum emphasizes practical learning, research opportunities, and a collaborative atmosphere. Our students have the chance to engage in cutting-edge research, participate in industry internships, and join student organizations that foster personal and professional growth.
+            </p>
+          </div>
         </div>
-        <div className="widget">
-          <h2>Get involved</h2>
-          <p>There are many ways to get involved at the School of Engineering Sciences, including:</p>
-          <ul>
-            <li>Joining a student organization</li>
-            <li>Volunteering your time</li>
-            <li>Attending events</li>
-            <li>Participating in research</li>
-          </ul>
+      </section>
+
+      {/* Academics section */}
+      <section className="academics-section">
+      <h2>Academic Programs</h2>
+<div class="program-list">
+  <div class="program-card">
+    <h3>Bachelor of Science in Computer Engineering</h3>
+    <p>Our Computer Engineering program equips students with the knowledge and skills to design and develop computer hardware and software systems. Graduates excel in the fast-paced field of technology.</p>
+  </div>
+  <div class="program-card">
+    <h3>Bachelor of Science in Food Process Engineering</h3>
+    <p>Our Food Process Engineering program focuses on the production, preservation, and packaging of food products. Graduates play a vital role in ensuring food safety and innovation in the food industry.</p>
+  </div>
+  <div class="program-card">
+    <h3>Bachelor of Science in Material Science Engineering</h3>
+    <p>Our Material Science Engineering program explores the properties and behavior of various materials. Graduates contribute to advancements in materials research and development for diverse applications.</p>
+  </div>
+  <div class="program-card">
+    <h3>Bachelor of Science in Agricultural Engineering</h3>
+    <p>Our Agricultural Engineering program integrates engineering principles with agricultural sciences to improve agricultural practices and machinery. Graduates drive innovation in sustainable agriculture.</p>
+  </div>
+  <div class="program-card">
+    <h3>Bachelor of Science in Biomedical Engineering</h3>
+    <p>Our Biomedical Engineering program combines engineering principles with medical and biological sciences to develop innovative healthcare technologies. Graduates contribute to advancements in healthcare and medical device industries.</p>
+  </div>
+</div>
+
+      </section>
+
+   
+      <section className="student-life-section">
+        <h2>Student Life at the School of Engineering Sciences</h2>
+        <div className="student-life-content">
+          <div className="testimonial">
+            <p>"The School of Engineering Sciences has provided me with exceptional opportunities to grow both academically and personally. The supportive faculty, state-of-the-art labs, and vibrant student community have enriched my learning experience."<br /><span>- Benjamin Sasu, Computer Engineering Student</span></p>
+          </div>
+          <div className="student-organizations">
+            <h3>Student Organizations</h3>
+            <ul>
+              <li>Engineering Society</li>
+              <li>Women in Engineering</li>
+              <li>Robotics Club</li>
+              <li>Machine learning</li>
+              
+            </ul>
+          </div>
         </div>
-      </div>
-      <div className="footer">
+      </section>
+
+      {/* Contact section */}
+      <section className="contact-section">
+        <h2>Contact Us</h2>
+        <div className="contact-info">
+          <p>
+            If you have any questions or would like to learn more about our programs, feel free to reach out to us. Our team is here to assist you.
+          </p>
+          <p>Email: info@engineering.ug.edu.gh</p>
+          <p>Phone: +233 545 4343 22</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
         <div className="social-media">
           <a href="https://www.facebook.com"><img src={facebookLogo} alt="Facebook" /></a>
           <a href="https://www.twitter.com"><img src={twitterLogo} alt="Twitter" /></a>
@@ -84,43 +121,31 @@ const EngineeringSchoolHomepage = () => {
 
         <div className="footer-sections">
           <div className="contact-form">
+            {/* Contact form component */}
             <h3>Contact Us</h3>
             <form>
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Your Email" />
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
               <textarea placeholder="Message"></textarea>
-              <button type="submit">Send</button>
+              <button>Send Message</button>
             </form>
           </div>
-
-          <div className="blog-section">
+          <div className="latest-blog-posts">
             <h3>Latest Blog Posts</h3>
             <ul>
-              <li>Blog Post 1</li>
-              <li>Blog Post 2</li>
-              <li>Blog Post 3</li>
+              <li>Post 1</li>
+              <li>Post 2</li>
+              <li>Post 3</li>
             </ul>
           </div>
-
-          <div className="testimonials-section">
-            <h3>Student Testimonials</h3>
-            <div className="testimonial">
-              <p>"The University of Ghana, Legon has provided me with an exceptional engineering education. The dedicated faculty, modern facilities, and vibrant campus community have made my learning experience truly enriching. I am proud to be a part of this prestigious institution."
-</p>
-              <span>- Daniel Doe, Engineering Student</span>
-            </div>
-            <div className="testimonial">
-              <p>"At the University of Ghana, Legon, I have found a nurturing environment for my engineering studies. The university's strong emphasis on practical learning, collaborative atmosphere, and opportunities for research have helped me develop valuable skills and connections. I am grateful for the holistic education I am received at Legon."</p>
-              <span>- Nana Kwame, Engineering Alumni</span>
-            </div>
-          </div>
-
-          <div className="donate-button">
+          <div className="support-school">
             <h3>Support Our School</h3>
-            <button>Donate Now</button>
+            <p>Your generous donations help us provide scholarships, enhance facilities, and support research initiatives. Together, we can make a difference.</p>
+            <button className='butt'>Donate Now</button>
           </div>
         </div>
-      </div>
+        <p>&copy; 2023 University of Ghana, Sch Of Engineering. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
